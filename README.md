@@ -1,3 +1,3 @@
-# Basic-Portfolio
-First Homework Assignment
-I created the files specified in the homework assignment.  I tried to eyeball dimensions of the elements.  In order to make more room for the portfolio images, I made the footer smaller and the container element wider.
+# Bootstrap-Portfolio
+Second Homework Assignment
+I tried to minimize the media queries with Bootstrap.  I still used them for positioning the footer and nav areas.

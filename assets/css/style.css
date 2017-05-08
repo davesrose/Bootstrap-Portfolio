@@ -1,87 +1,59 @@
-
-header {
-	border-bottom: solid 2px #CCC;
-	background-color: #fff;
-}
 body {
 	background-color: #DDD;
-
+	height: 100%;
 }
-footer {
-	background-color: #666;
-	font-family: 'Georgia', Times, Times New Roman, serif;
-	color: #CCC;
+html {
+	height: 100%;
 }
-.footer {
-	padding: 1%;
-	border-top: solid 5px #4aaaa5;
-	margin-top: 10px;
-}
-#name {
-	color: #fff;
-	background-color: #4aaaa5;
-	font-family: "Times New Roman", Times, serif;
-}
-#nav {
-	margin-top: 15px;
+nav {
+	background-color: #fff;
 }
 section {
 	background-color: #fff;
-	overflow: visible;
+	margin-top: 15px;
 }
 aside {
 	background-color: #fff;
+	margin-top: 15px;
+	padding-bottom: 15px;
 }
-section img {
-	margin-right: 10px;
+.navbar {
+	padding: 0px;
+	margin: 0px;
 }
-aside a img {
-	margin-right: 10px;
-}
-
-h2 {
-	color: #4aaaa5;
-	font-family: 'Georgia', Times, Times New Roman, serif;
-	font-size: 28px;
-	font-weight: bold;
-	padding-bottom: 20px;
-	margin-bottom: 25px;
-	border-bottom: solid 2px #CCC;
-}
-h3 {
-	color: #4aaaa5;
-	font-family: 'Georgia', Times, Times New Roman, serif;
-	font-size: 22px;
-	font-weight: bold;
-	padding-bottom: 20px;
-	margin-bottom: 25px;
-	border-bottom: solid 2px #CCC;
-}
-.imageClip {
-	width: 250px;
-}
-.image-container {
-	position: relative;
-	margin-bottom: 15px;
-}
-.portImage {
-	width: 270px;
-	/*position: absolute;*/
-}
-.float {
-	width: 270px;
-	height: 50px;
+.navbar-header {
 	background-color: #4aaaa5;
-	position: absolute;
-	margin-top: -80px;
-	z-index: 10;
 }
-.float h4 {
-	color: #fff;
-	font-family: "Times New Roman", Georgia, Serif;
-	font-size: 22px;
-	text-align: center;
-	margin-top: 12px;
+.navbar-header h1 {
+	color : #fff;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 26px;
+}
+.nav-item {
+	padding: 5px 15px;
+	float: left;
+}
+.v-align {
+	margin-top: 25px;
+}
+.navbar-nav li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #777;
+}
+.navbar-nav a {
+	color: #777;
+}
+.navbar-nav a:hover {
+	text-decoration: none;
+	color: #FF7F50;
+}
+.Portrait {
+	width: 250px;
+	margin-right: 15px;
+}
+.contact {
+	padding-bottom: 15px;
 }
 .contact input {
 	width: 100%;
@@ -103,25 +75,118 @@ h3 {
 	padding: 0px;
 	margin: 12px 0px -10px 0px;
 }
-@media (max-width: 960px) and (min-width: 720px) {
-	#name {
-		width: 300px;
-		float: left;
-		margin-top: -15px;
-	}
+h2 {
+	color: #4aaaa5;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	font-size: 28px;
+	font-weight: bold;
+	padding-bottom: 20px;
+	margin-bottom: 25px;
+	border-bottom: solid 2px #CCC;
+}
+h3 {
+	color: #4aaaa5;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	font-size: 22px;
+	font-weight: bold;
+	padding-bottom: 20px;
+	margin-bottom: 25px;
+	border-bottom: solid 2px #CCC;
+}
+footer {
+	background-color: #666;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	color: #CCC;
+	border-top: solid 5px #4aaaa5;
+}
+.image-container {
+	width: 50%;
+	float: left;
+	position: relative;
+	z-index: 1;
+}
+.portfolio {
+	padding-bottom: 30px;
+}
+.portfolio img {
+	width: 100%;
+	height: auto;
+	z-index: 1;
+}
+.float {
+	width: 100%;
+	height: 50px;
+	background-color: #4aaaa5;
+	margin-top: -80px;
+	position: relative;
+	z-index: 10;
+}
+.float h4 {
+	color: #fff;
+	font-family: "Times New Roman", Georgia, Serif;
+	font-size: 22px;
+	text-align: center;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -85px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 85px; /* .push must be the same height as .footer */
+}
+.footer .container p {
+	margin-top: 10px;
+}
+.clear {
+	clear: both;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+/*======special formatting for elements under 768px wide or -xs ======*/
 
+@media (max-width: 767px) {
+	.navbar-header {
+	  margin-left: -15px;
+	  width: 105%;
+	}
+	.v-align {
+		margin-top: 0px;
+	}
+	section {
+		padding: 20px;
+		margin: 10px 15px;
+	}
+	aside {
+		padding: 20px;
+		margin: 10px 15px;
+	}
+	.contact {
+		padding-bottom: 0px;
+	}
 }
-@media (max-width: 719px) {
-	#name {
-		padding: 5px 20px 15px 20px;
-		/*Have seen that bootstrap margins are 15px by default*/
-		margin: 0 -15px;
+
+@media (max-width: 992px) and (min-width: 768px) {
+	h2 {
+		padding-top: 15px;
 	}
-	#nav {
-		position: relative;
-		margin-right: 30%;
+	section {
+		padding-bottom: 15px;
 	}
-	#position {
-		position: relative;
+	h3 {
+		padding-top: 15px;
 	}
+	.portfolio {
+		margin: 15px 10px;
+	}
+	.asideMargin {
+		margin: 15px 10px;
+	
 }
+
+/*@media (max-height: 1024px) {
+	.navbar-fixed-bottom {
+		position: relative;
+	}
+}*/
